@@ -1,0 +1,307 @@
+body {
+  
+  margin: 0;
+  padding-top: 70px; /* matches .header height */
+  background: url('16565.jpg') center/cover no-repeat fixed;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 50px;
+  background-color: #fff;       /* solid, not transparent */
+  position: fixed;              /* stays at the top always */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;                /* ensures navbar is always above content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.logo-img {
+  height: 109px;
+  width: auto;
+  display: block;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* increase right padding */
+  overflow: visible;  /* ensure nothing is hidden */
+}
+.login-btn {
+  background-color: #f4821f;
+  color: black;
+  padding: 8px 16px;   /* inside space of button */
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 20px;  /* pushes button 20px left from edge */
+}
+
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav button {
+  margin-left: 15px;
+  margin-right: 20px;  /* ✅ Adds 20px space on right side */
+  padding: 8px 16px;
+  border: none;
+  background-color: #f07c2d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+.header .nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.header .btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Hero */
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  /* background: rgba(0,0,0,0.4);  */
+}
+.hero {
+  position: relative;
+  /* background: url('16565.jpg') center/cover no-repeat; */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary { background-color: #e67e22; color: white; }
+.btn-secondary { background-color: white; color: #e67e22; }
+
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #e67e22;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #e67e22, #ffae42);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}.about-list {
+  text-align: left;
+  display: inline-block;
+  margin: 20px auto;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.about-tagline {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #e67e22;
+  font-style: italic;
+}
+
+.temples h2{
+  color: #fff;
+  margin-left: 20px;
+}
+/* Temple cards */
+.temple-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #f5d48a;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #e67e22;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background: linear-gradient(90deg, #e67e22, #ff9f43);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: linear-gradient(90deg, #ff9f43, #e67e22);
+}
+
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* --- ONLY modify the 3 steps/cards --- */
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.9); /* slightly transparent so bg image shows */
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px); /* glass effect */
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 600;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-columns div {
+  margin: 10px;
+}
+.footer-columns a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .temple-cards, .steps, .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
