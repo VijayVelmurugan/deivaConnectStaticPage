@@ -1,0 +1,2 @@
+# deivaConnectStaticPage
+Static page
